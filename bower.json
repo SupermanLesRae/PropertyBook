@@ -9,8 +9,8 @@
   "license": "MIT",
   "install" : {
     "path": {
-      "css": "public/css",
-      "js": "public/js"
+      "css": "public/components/css",
+      "js": "public/components/js"
     }
   },
   "ignore": [
