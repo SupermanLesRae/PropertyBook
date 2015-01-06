@@ -1,0 +1,23 @@
+{
+  "name": "PropertyBook",
+  "version": "0.0.0",
+  "homepage": "https://github.com/SupermanLesRae/PropertyBook",
+  "authors": [
+    "lsuperman <superman.lesrae111@gmail.com>"
+  ],
+  "description": "property book dependents",
+  "license": "MIT",
+  "install" : {
+    "path": {
+      "css": "public/css",
+      "js": "public/js"
+    }
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
