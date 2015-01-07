@@ -7,7 +7,7 @@
   ],
   "description": "property book dependents",
   "license": "MIT",
-  "install" : {
+  "install": {
     "path": {
       "css": "public/css/components",
       "js": "public/js/components"
@@ -19,5 +19,14 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap-material-design": "~0.2.1",
+    "jquery": "~2.1.3",
+    "bootstrap": "~3.3.1",
+    "normalize.css": "~3.0.2",
+    "reset-css": "~2.0.20110126",
+    "html5shiv": "~3.7.2",
+    "respond": "~1.4.2"
+  }
 }
