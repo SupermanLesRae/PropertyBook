@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+<head>
+    <% include partials/head.ejs %>
+</head>
 </head>
 <body>
-<h1><%= title %></h1>
+    <div class="outerWrapper">
+        <div class="innerWrapper">
+            <div class="container">
+                <h1><%= title %></h1>
+            </div>
+        </div>
+    </div>
+<% include partials/scripts.ejs %>
 </body>
 </html>

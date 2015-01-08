@@ -1,5 +1,33 @@
+
+
+
 <script src="js/components/jquery/jquery.js"></script>
 <script src="js/components/bootstrap/bootstrap.js"></script>
 <script src="js/components/bootstrap-material-design/material.js"></script>
 <script src="js/components/bootstrap-material-design/ripples.js"></script>
 <script src="js/components/material-preloader/materialPreloader.min.js"></script>
+
+
+<script type="text/javascript">
+    preloader = new $.materialPreloader({
+        position: 'top',
+        height: '5px',
+        col_1: '#159756',
+        col_2: '#da4733',
+        col_3: '#3b78e7',
+        col_4: '#fdba2c',
+        fadeIn: 200,
+        fadeOut: 800
+    });
+    preloader.on();
+
+    $(function() {
+        //simulate the preloader delay
+        setTimeout(function() {
+            preloader.off();
+        }, 2000)
+    });
+
+</script>
+
+<script src="js/index.js"></script>

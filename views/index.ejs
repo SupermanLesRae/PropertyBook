@@ -5,11 +5,25 @@
   </head>
   <body>
 
-  <div class="container">
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+  <% include partials/navbar.ejs %>
+
+  <div class="outerWrapper">
+
+    <div class="innerWrapper">
+      <div class="container">
+        <h1 class="text-primary">Introduction</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ea eius est mollitia qui quibusdam reiciendis, sequi! Ad, adipisci animi debitis dolores enim et excepturi fuga harum iste, numquam optio!</p><br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores aspernatur blanditiis delectus dignissimos doloremque eius, exercitationem harum officia officiis pariatur provident quas quod suscipit vel veritatis vitae voluptatum? Ad.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae deserunt dolorem dolorum ducimus, impedit ipsa labore maiores nam neque nihil nobis obcaecati optio quae quam quibusdam recusandae repellendus veritatis voluptatum!</p>
+      </div>
+    </div>
   </div>
 
   </body>
+
   <% include partials/scripts.ejs %>
 </html>
+
+
+
+
