@@ -2,8 +2,7 @@
 (function() {
   $(function() {
     return $('#clickBtn').click(function(e) {
-      e.preventDefault();
-      return alert("yes!");
+      return e.preventDefault();
     });
   });
 
