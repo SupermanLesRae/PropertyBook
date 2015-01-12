@@ -11,25 +11,6 @@ h1 {
 h2 {
   font-size: 36px; }
 
-.jumbotron_intro {
-  padding: 50px !important;
-  margin-top: -80px;
-  margin-left: 60px;
-  margin-right: 60px; }
-  .jumbotron_intro h1 {
-    font-size: 36px; }
-  .jumbotron_intro p {
-    font-size: 16px;
-    line-height: 22px; }
-  @media screen and (max-width: 768px) {
-    .jumbotron_intro {
-      margin-left: 0px;
-      margin-right: 0px; } }
-  @media screen and (max-width: 480px) {
-    .jumbotron_intro {
-      margin-left: 0px;
-      margin-right: 0px; } }
-
 #materialPreloader {
   z-index: 999999;
   background: white;
@@ -81,3 +62,6 @@ h2 {
   left: 0; }
   .outerWrapper .innerWrapper {
     position: relative; }
+
+a, a:hover, a:focus {
+  color: white; }
