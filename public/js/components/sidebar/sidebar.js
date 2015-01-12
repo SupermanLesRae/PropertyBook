@@ -250,6 +250,7 @@
         self.$wrapper.css('transition', 'none');
         self.$wrapper.css('-webkit-transform', 'translate3d(' + horizontal + 'px, 0px, 0px)');
         self.$wrapper.css('transform', 'translate3d(' + horizontal + 'px, 0px, 0px)');
+
     }
 
     /**

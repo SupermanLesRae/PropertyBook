@@ -4821,6 +4821,16 @@ fieldset[disabled] .navbar .btn-link:focus {
 .navbar-material-white {
   background-color: #FFF;
 }
+
+.navbar-material-eclair {
+  background-color: #e64d4f;
+}
+
+.navbar-material-honeycomb {
+  background-color: #ffbf3b;
+}
+
+
 .navbar-material-white .navbar-brand,
 .navbar-material-white .navbar-brand:hover,
 .navbar-material-white .navbar-brand:focus {
