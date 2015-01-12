@@ -85,6 +85,7 @@ h2 {
   position: relative;
   top:0;
   left: 0;
+  margin-top:200px;
 
   .innerWrapper {
     position: relative;
@@ -95,3 +96,9 @@ a, a:hover, a:focus {
   color: white;
 }
 
+
+////////////////////////////////////////////////////////////////////////////////////
+.navbar-right {
+  float: right !important;
+   margin-right: 0px!important;
+}

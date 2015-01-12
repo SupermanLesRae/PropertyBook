@@ -11,34 +11,41 @@
 
     <div class="innerWrapper">
 
-      <!-- SIDEBAR -->
-      <div data-sidebar="true" data-force-toggle="true" data-locked="true"
-           class="sidebar-trigger sidebar-force-open sidebar-locked">
-        <a class="sidebar-toggle" href="#">
-          <i class="fa fa-sidebar-toggle"></i>
-        </a>
-
-        <div class="sidebar-wrapper sidebar-default sidebar-open-init">
-          <div class="sidebar-scroller">
-            <ul class="sidebar-menu">
-              <li class="sidebar-item"><a href="#">Item 11</a></li>
-              <li class="sidebar-item"><a href="#">Item 12</a></li>
-              <li class="sidebar-item"><a href="#">Item 13</a></li>
-              <li class="sidebar-item"><a href="#">Item 14</a></li>
-              <li class="sidebar-item"><a href="#">Item 15</a></li>
-              <li class="sidebar-item"><a href="#">Item 16</a></li>
-              <li class="sidebar-item"><a href="#">Item 17</a></li>
-              <li class="sidebar-item"><a href="#">Item 18</a></li>
-              <li class="sidebar-item"><a href="#">Item 19</a></li>
-              <li class="sidebar-item"><a href="#">Item 20</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
+      <% include partials/sidebar.ejs %>
 
       <div class="container">
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="panel panel-default">
+              <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Post Examples</h4></div>
+              <div class="panel-body">
+                <div class="list-group">
+                  <a href="http://bootply.com/tagged/modal" class="list-group-item">Lorem Ipsom</a>
+                  <a href="http://bootply.com/tagged/datetime" class="list-group-item">Lorem Ipsom</a>
+                  <a href="http://bootply.com/tagged/datatable" class="list-group-item">Lorem Ipsom</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-6">
+            <div class="panel panel-default">
+              <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Post Examples</h4></div>
+              <div class="panel-body">
+                <div class="list-group">
+                  <a href="http://bootply.com/tagged/modal" class="list-group-item">Lorem Ipsom</a>
+                  <a href="http://bootply.com/tagged/datetime" class="list-group-item">Lorem Ipsom</a>
+                  <a href="http://bootply.com/tagged/datatable" class="list-group-item">Lorem Ipsom</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
+
     </div>
   </div>
 
