@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include partials/head.ejs %>
+</head>
+<body>
+
+<% include partials/navbar.ejs %>
+
+<div class="section-content-header">
+    <ul class="breadcrumb" style="margin-bottom: 5px;">
+        <li><a href="javascript:void(0)">Profile</a></li>
+    </ul>
+</div>
+
+<div class="outerWrapper">
+
+    <div class="innerWrapper">
+
+        <% include partials/sidebar.ejs %>
+
+        <div class="container">
+
+            <div class="profileHeader">
+                <div class="list-group">
+                    <div class="list-group-item">
+                        <div class="row-picture">
+                            <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
+                        </div>
+                        <div class="row-content">
+                            <h4 class="list-group-item-heading">Les-Rae Superman <small> <span class="label label-info">Self / Company</span> </small> </h4>
+                            <p class="list-group-item-text">Description of user / company</p>
+                        </div>
+
+                        <div style="float: right; font-size: 20px;"><a href="/settings"><i class="mdi-navigation-more-vert"></i></a></div>
+
+                    </div>
+                    <div class="list-group-separator"></div>
+                </div>
+            </div>
+
+            <div class="profile-pills" style="margin-left:20px;">
+                <ul class="nav nav-pills" style="padding-bottom:0px;">
+                    <li class="active"><a href="javascript:void(0)">Active Properties <span class="badge">12</span></a></li>
+                    <li><a href="javascript:void(0)">Sold Properties <span class="badge">1</span></a></li>
+                    <li><a href="javascript:void(0)">Hot Properties <span class="badge">2</span></a></li>
+                    <li><a href="javascript:void(0)">Activity <span class="badge"></span></a></li>
+                    <li><a href="javascript:void(0)">Messages <span class="badge">3</span></a></li>
+                </ul>
+            </div>
+
+            <div class="propertyTabs">
+                <div class="activeProperties">
+                    <div class="list-group">
+                        <div class="list-group-item">
+                            <div class="row-action-primary">
+                                <i class="mdi-file-folder"></i>
+                            </div>
+                            <div class="row-content">
+                                <div class="least-content">150 m<sup>2</sup> </div>
+                                <h4 class="list-group-item-heading">Property 1</h4>
+                                <p class="list-group-item-text">Property description</p>
+                            </div>
+                        </div>
+                        <div class="list-group-separator"></div>
+                        <div class="list-group-item">
+                            <div class="row-action-primary">
+                                <i class="mdi-file-folder"></i>
+                            </div>
+                            <div class="row-content">
+                                <div class="least-content">100 m<sup>2</sup> </div>
+                                <h4 class="list-group-item-heading">Property 2</h4>
+                                <p class="list-group-item-text">Property description</p>
+                            </div>
+                        </div>
+                        <div class="list-group-separator"></div>
+                        <div class="list-group-item">
+                            <div class="row-action-primary">
+                                <i class="mdi-file-folder"></i>
+                            </div>
+                            <div class="row-content">
+                                <div class="least-content">120 m<sup>2</sup> </div>
+                                <h4 class="list-group-item-heading">Property 3</h4>
+                                <p class="list-group-item-text">Property description</p>
+                            </div>
+                        </div>
+                        <div class="list-group-separator"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<% include partials/scripts.ejs %>
+
+</body>
+
+</html>
+
+
+
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include partials/head.ejs %>
+</head>
+<body>
+
+<% include partials/navbar.ejs %>
+
+<div class="section-content-header">
+    <ul class="breadcrumb" style="margin-bottom: 5px;">
+        <li><a href="javascript:void(0)">Search</a></li>
+    </ul>
+</div>
+
+<div class="outerWrapper">
+
+    <div class="innerWrapper">
+
+        <% include partials/sidebar.ejs %>
+
+        <div class="container">
+
+            <div class="form-group">
+                <label class="control-label">Find People / Companies <small>you are interested in</small></label>
+                <div class="input-group">
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                        <button class="btn btn-info" type="button">Search</button>
+                    </span>
+                </div>
+            </div>
+
+            <div class="results">
+                <h3>Results</h3>
+                <div class="list-group">
+                    <div class="list-group-separator"></div>
+                    <div class="list-group-item">
+                        <div class="row-picture">
+                            <img class="circle" src="http://lorempixel.com/56/56/people/6" alt="icon">
+                        </div>
+                        <div class="row-content">
+                            <h4 class="list-group-item-heading">Tile with another avatar</h4>
+                            <p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p>
+                        </div>
+                    </div>
+                    <div class="list-group-separator"></div>
+                    <div class="list-group-item">
+                        <div class="row-picture">
+                            <img class="circle" src="http://lorempixel.com/56/56/people/6" alt="icon">
+                        </div>
+                        <div class="row-content">
+                            <h4 class="list-group-item-heading">Tile with another avatar</h4>
+                            <p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p>
+                        </div>
+                    </div>
+                    <div class="list-group-separator"></div>
+                    <div class="list-group-item">
+                        <div class="row-picture">
+                            <img class="circle" src="http://lorempixel.com/56/56/people/6" alt="icon">
+                        </div>
+                        <div class="row-content">
+                            <h4 class="list-group-item-heading">Tile with another avatar</h4>
+                            <p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p>
+                        </div>
+                    </div>
+                    <div class="list-group-separator"></div>
+                    <div class="list-group-item">
+                        <div class="row-picture">
+                            <img class="circle" src="http://lorempixel.com/56/56/people/6" alt="icon">
+                        </div>
+                        <div class="row-content">
+                            <h4 class="list-group-item-heading">Tile with another avatar</h4>
+                            <p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p>
+                        </div>
+                    </div>
+                    <div class="list-group-separator"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<% include partials/scripts.ejs %>
+
+</body>
+
+</html>
+
+
+
+

@@ -49,8 +49,10 @@ h2 {
 }
 
 .sidebar-toggle {
+
+  color: white!important;
   @media screen and (max-width: $break-small) {
-    top: -245px!important;
+    top: 0px!important;
   }
 }
 
@@ -58,6 +60,7 @@ h2 {
   position: relative;
   display: block;
   float: left!important;
+  margin-bottom: 20px!important;
 }
 
 .navbar-nav {
@@ -84,6 +87,9 @@ h2 {
     padding-top: 20px;
     padding-bottom: 90px;
     padding-left: 40px;
+    background-image: url("../img/header_right_bg.png");
+    background-repeat: no-repeat;
+    background-position: right;
   }//navbar
 
   .btn {
@@ -108,12 +114,13 @@ h2 {
 }
 
 .section-content-header {
-  position:absolute;
+  position:fixed;
   width:100%;
   height:50px;
   background: #e46e70;
   top: 146px;
   box-shadow: 0px 2px 5px #8f3b3d;
+  z-index: 1000;
 
   p {
     text-transform: uppercase;
@@ -121,13 +128,11 @@ h2 {
     text-align: center;
     font-size: 16px;
     color: #ffffff;
-    background-color: #e64d4f;
-    background: #e64d4f;
     width: 200px;
     height:50px;
     padding-top:15px;
     margin-left: 50%;
-    
+
 
     @media screen and (max-width: $break-large-medium) {
       margin-left: auto;
@@ -146,9 +151,116 @@ h2 {
   }//innerWrapper
 }//outerWrapper
 
-a, a:hover, a:focus {
-  color: white;
+
+.alink-color {
+  color:white!important;
+  border: none!important;
 }
+
+.panel-heading {
+  padding: 25px 15px!important;
+}
+
+.panel-icon-holder {
+  float:right;
+  position:relative;
+  margin-top:-20px;
+
+  i {
+    font-size: 20px;
+    color: white!important;
+  }
+
+  a:hover {
+    color: white!important;
+  }
+}
+
+.panel-info-header {
+  width: 100%;
+  height:50px;
+  font-style: italic;
+  background: #efefef;
+   p {
+     line-height: 50px;
+     padding-left:15px;
+     i {
+       float:none;
+     }
+   }
+
+  i {
+    float:right;
+    margin-top:-42px;
+    margin-right: 15px;
+  }
+}
+
+.profile-pills {
+  position:relative;
+  margin-top:30px;
+  margin-bottom:30px;
+
+  ul {
+    li {
+      a:hover {
+        background: #cdcdcd !important;
+      }
+    }
+    li.active {
+      a:hover {
+        background: #337ab7!important;
+      }
+    }
+  }
+}
+
+.nav > li > a {
+  color:#272727;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+}
+
+.nav > .active > a {
+  color:#ffffff!important;
+}
+
+.badge {
+  background-color: #0f9d58;
+}
+
+.profileHeader {
+  .list-group .list-group-separator:before {
+    content: "";
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    float: right;
+  }
+}
+
+.breadcrumb {
+  padding: 16px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: transparent!important;
+  border-radius: 4px;
+  margin-left: 210px;
+  li {
+    a {
+      color: white!important;
+    }
+  }
+}
+
+.breadcrumb {
+  li.active {
+    color:white!important;
+  }
+}
+
+
 
 
 ////////////////////////////////////////////////////////////////////////////////////

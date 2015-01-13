@@ -7,7 +7,11 @@
 
   <% include partials/navbar.ejs %>
 
-  <div class="section-content-header"><p>Home</p></div>
+  <div class="section-content-header">
+    <ul class="breadcrumb" style="margin-bottom: 5px;">
+      <li><a href="javascript:void(0)">Latest post</a></li>
+    </ul>
+  </div>
 
   <div class="outerWrapper">
 
@@ -19,32 +23,86 @@
 
         <div class="row">
           <div class="col-md-6">
-            <div class="panel panel-default">
-              <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Post Examples</h4></div>
-              <div class="panel-body">
-                <div class="list-group">
-                  <a href="http://bootply.com/tagged/modal" class="list-group-item">Lorem Ipsom</a>
-                  <a href="http://bootply.com/tagged/datetime" class="list-group-item">Lorem Ipsom</a>
-                  <a href="http://bootply.com/tagged/datatable" class="list-group-item">Lorem Ipsom</a>
+
+            <div class="panel panel-success">
+              <div class="panel-heading">
+                <h3 class="panel-title"> <i class="fa fa-home"></i> Sold Property</h3>
+                <div class="panel-icon-holder">
+                  <a href="#"><i class="mdi-action-room"></i></a>
+                  <a href="#"><i class="mdi-communication-call"></i></a>
+                  <a href="#"><i class="mdi-image-photo"></i></a>
                 </div>
               </div>
-            </div>
+              <div class="panel-info-header">
+                <p> <i class="mdi-social-group"></i> Person/Company this property is linked to</p> <i class="mdi-navigation-chevron-right"></i>
+              </div>
+              <div class="panel-body">
+                When a property is sold the user will add the sold tag and the panel will be represented by this green color.
+                once a property is sold it will have a limited time before it is removed from the home post timeline.
+                <br><br>
+                When the user sets there sold to true this will improved their rating status
+              </div>
+            </div><!-- panel -->
 
-          </div>
+            <div class="panel panel-warning">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-home"></i> Hot Property</h3>
+                <div class="panel-icon-holder">
+                  <a href="#"><i class="mdi-action-room"></i></a>
+                  <a href="#"><i class="mdi-communication-call"></i></a>
+                  <a href="#"><i class="mdi-image-photo"></i></a>
+                  <a href=""><i class="mdi-content-archive"></i></a>
+                </div>
+              </div>
+              <div class="panel-info-header">
+                <p> <i class="mdi-social-group"></i> Person/Company this property is linked to</p> <i class="mdi-navigation-chevron-right"></i>
+              </div>
+              <div class="panel-body">
+                For every 5 Properties added a company can set one property as a hot property
+              </div>
+            </div><!-- panel -->
+
+          </div><!-- col-md-6 -->
           <div class="col-md-6">
-            <div class="panel panel-default">
-              <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Post Examples</h4></div>
-              <div class="panel-body">
-                <div class="list-group">
-                  <a href="http://bootply.com/tagged/modal" class="list-group-item">Lorem Ipsom</a>
-                  <a href="http://bootply.com/tagged/datetime" class="list-group-item">Lorem Ipsom</a>
-                  <a href="http://bootply.com/tagged/datatable" class="list-group-item">Lorem Ipsom</a>
+
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-home"></i> New Property Added</h3>
+                <div class="panel-icon-holder">
+                  <a href="#"><i class="mdi-action-room"></i></a>
+                  <a href="#"><i class="mdi-communication-call"></i></a>
+                  <a href="#"><i class="mdi-image-photo"></i></a>
+                  <a href=""><i class="mdi-content-archive"></i></a>
                 </div>
               </div>
-            </div>
+              <div class="panel-info-header">
+                <p> <i class="mdi-social-group"></i> Person/Company this property is linked to</p> <i class="mdi-navigation-chevron-right"></i>
+              </div>
+              <div class="panel-body">
+                When a new property is added to a users account, it will be represented by this green color
+              </div>
+            </div><!-- panel -->
 
-          </div>
-        </div>
+            <div class="panel panel-info">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-home"></i> Cold Property</h3>
+                <div class="panel-icon-holder">
+                  <a href="#"><i class="mdi-action-room"></i></a>
+                  <a href="#"><i class="mdi-communication-call"></i></a>
+                  <a href="#"><i class="mdi-image-photo"></i></a>
+                  <a href=""><i class="mdi-content-archive"></i></a>
+                </div>
+              </div>
+              <div class="panel-info-header">
+                <p> <i class="mdi-social-group"></i> Person/Company this property is linked to</p> <i class="mdi-navigation-chevron-right"></i>
+              </div>
+              <div class="panel-body">
+                This Property has been online for a while so it's status is cold
+              </div>
+            </div><!-- panel -->
+
+          </div><!-- col-md-6 -->
+        </div><!-- row -->
 
       </div>
 
