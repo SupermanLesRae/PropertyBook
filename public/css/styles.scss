@@ -2,6 +2,7 @@ $break-large:1280px;
 $break-large-medium:991px;
 $break-medium:768px;
 $break-small:480px;
+$menu-hide:1008px;
 
 h1 {
   font-size: 40px;
@@ -251,6 +252,10 @@ h2 {
     a {
       color: white!important;
     }
+  }
+
+  @media screen and (max-width: $break-large-medium) {
+    margin-left: 5px;
   }
 }
 

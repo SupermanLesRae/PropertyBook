@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include partials/head.ejs %>
+</head>
+<body>
+
+<% include partials/navbar.ejs %>
+
+<div class="section-content-header">
+    <ul class="breadcrumb" style="margin-bottom: 5px;">
+        <li class="active">SignIn</li>
+    </ul>
+</div>
+
+<div class="outerWrapper">
+
+    <div class="innerWrapper">
+
+        <% include partials/sidebar.ejs %>
+
+        <div class="container">
+
+            <form class="form-horizontal">
+                <fieldset>
+                    <legend>Enter details below to create your account</legend>
+                    <div class="form-group">
+                        <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                        <div class="col-lg-10">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail" class="col-lg-2 control-label">Password</label>
+                        <div class="col-lg-10">
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail" class="col-lg-2 control-label">Password Confirm</label>
+                        <div class="col-lg-10">
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password Confirm">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-2">
+                            <p>Once you have signed in please follow the link in the email to complete your profile information</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-2">
+                            <a href="/login" class="btn btn-default">Login</a>
+                            <a type="submit" class="btn btn-primary">Submit</a>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+
+        </div>
+
+    </div>
+</div>
+
+<% include partials/scripts.ejs %>
+
+</body>
+
+</html>
+
+
+
+

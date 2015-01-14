@@ -179,6 +179,9 @@ h2 {
   margin-left: 210px; }
   .breadcrumb li a {
     color: white !important; }
+  @media screen and (max-width: 991px) {
+    .breadcrumb {
+      margin-left: 5px; } }
 
 .breadcrumb li.active {
   color: white !important; }
