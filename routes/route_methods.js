@@ -16,12 +16,14 @@ module.exports = {
     //landing ----------------------------------------------------------------------------------------------------------
     home: function (req, res) {
         console.log('Home Call');
+        res.locals.isLoggedIn = session.isLoggedIn;
         res.render('index', { title: 'Home'});
     },
     //login ------------------------------------------------------------------------------------------------------------
     login: function (req, res) {
         console.log('login Call');
         session = req.session;
+        res.locals.isLoggedIn = session.isLoggedIn;
         res.render('login', { title: 'Login',  errorMsg:''});
     },
     //Login Post -------------------------------------------------------------------------------------------------------
@@ -36,6 +38,7 @@ module.exports = {
             else {
                 if(passwordHash.verify(req.body.password, entries.password) && req.body.email == entries.email) {
                     session.email = req.body.email;
+                    session.isLoggedIn = true;
                     return res.redirect('/profile')
                 }
                 else {
@@ -49,6 +52,7 @@ module.exports = {
     register: function (req, res) {
         console.log('register Call');
         session = req.session;
+        res.locals.isLoggedIn = session.isLoggedIn;
         res.render('register', { title: 'Register' });
     },
     //profile ----------------------------------------------------------------------------------------------------------
@@ -56,6 +60,7 @@ module.exports = {
         console.log('profile Call');
         session = req.session;
         if(session.email) {
+            res.locals.isLoggedIn = session.isLoggedIn;
             res.render('profile', { title: 'Profile' });
         }
         else {
@@ -65,15 +70,18 @@ module.exports = {
     //settings ---------------------------------------------------------------------------------------------------------
     settings: function (req, res) {
         console.log('settings Call');
+        res.locals.isLoggedIn = session.isLoggedIn;
         res.render('settings', { title: 'Settings'});
     },
     //search -----------------------------------------------------------------------------------------------------------
     search: function (req, res) {
+        res.locals.isLoggedIn = session.isLoggedIn;
         res.render('search', { title: 'Search'});
     },
     //hot properties ---------------------------------------------------------------------------------------------------
     hot_properties: function (req, res) {
         console.log('hot properties Call');
+        res.locals.isLoggedIn = session.isLoggedIn;
         session = req.session;
         res.render('hot_properties', { title: 'Hot Properties'});
     },
@@ -82,6 +90,7 @@ module.exports = {
         res.render('error', { title: '404Error'});
     },
     //test -------------------------------------------------------------------------------------------------------------
+    //used to test find and update functionality
     test: function (req, res) {
 
         userEntry.findOne({email:req.body.email},function(err, entries) {
@@ -94,7 +103,6 @@ module.exports = {
                 if (err) {
                     console.log('got an error');
                 }
-
                 res.json({ message: 'entry updated' });
             });
         })

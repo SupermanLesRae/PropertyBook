@@ -8,6 +8,8 @@
     <div class="sidebar-wrapper sidebar-default sidebar-open-init">
         <div class="sidebar-scroller">
             <ul class="sidebar-menu">
+
+                <% if(locals.isLoggedIn){ %>
                 <li class="sidebar-item">
                     <a href="/profile">
                         <div class="list-group">
@@ -19,6 +21,8 @@
                         </div>
                     </a>
                 </li>
+                <% } %>
+
                 <li class="sidebar-item"><a href="/">Latest Posts</a></li>
                 <li class="sidebar-item"><a href="/search">People / Companies</a></li>
                 <li class="sidebar-item"><hr></li>
