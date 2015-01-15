@@ -30,7 +30,7 @@ module.exports = {
         session = req.session;
         userEntry.findOne({email:req.body.email},function(err, entries) {
             if(err) {
-                console.log('db error')
+                console.log('db error');
                 res.render('error', { title: 'Page Error 404' });
             }
             else {
@@ -83,20 +83,12 @@ module.exports = {
     },
     //test -------------------------------------------------------------------------------------------------------------
     test: function (req, res) {
-     /*  var crudEntry = new userEntry();
-        crudEntry.name = req.body.name;  // set the bears name (comes from the request)
 
-        // save the bear and check for errors
-        crudEntry.save(function(err) {
-            if (err)
-                res.send(err);
-
-            res.json({ message: 'crudEntry created!' });
-        });
-*/
         userEntry.findOne({email:req.body.email},function(err, entries) {
+            var pass = passwordHash.generate('123');
+
             var query = {"name": "Les-Rae"};
-            var update = {"password": "webstorm 9"};
+            var update = {"password": pass};
             var options = {new: false};
             userEntry.findOneAndUpdate(query, update, options, function(err, person) {
                 if (err) {
