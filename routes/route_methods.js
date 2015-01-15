@@ -9,27 +9,27 @@ db.on('error', function() {
     console.log('db error');
 });
 mongoose.connect('mongodb://localhost:27017/propertydb');
-var session;
+var session = {
+    isLoggedIn:false
+};
 
 module.exports = {
 
     //landing ----------------------------------------------------------------------------------------------------------
     home: function (req, res) {
         console.log('Home Call');
-        res.locals.isLoggedIn = session.isLoggedIn;
-        res.render('index', { title: 'Home'});
+        session = req.session;
+        res.render('index', { title: 'Home', session:session});
     },
     //login ------------------------------------------------------------------------------------------------------------
     login: function (req, res) {
         console.log('login Call');
         session = req.session;
-        res.locals.isLoggedIn = session.isLoggedIn;
-        res.render('login', { title: 'Login',  errorMsg:''});
+        res.render('login', { title: 'Login',  errorMsg:'', session:session});
     },
     //Login Post -------------------------------------------------------------------------------------------------------
     login_post: function (req, res) {
         console.log('login post Call');
-        session = req.session;
         userEntry.findOne({email:req.body.email},function(err, entries) {
             if(err) {
                 console.log('db error');
@@ -38,7 +38,8 @@ module.exports = {
             else {
                 if(passwordHash.verify(req.body.password, entries.password) && req.body.email == entries.email) {
                     session.email = req.body.email;
-                    session.isLoggedIn = true;
+                    req.session.isLoggedIn = true;
+                    session = req.session;
                     return res.redirect('/profile')
                 }
                 else {
@@ -48,11 +49,16 @@ module.exports = {
         })
 
     },
+    //logout -----------------------------------------------------------------------------------------------------------
+    logout: function (req, res) {
+        console.log('logout Call');
+        req.session.isLoggedIn = false;
+        session = req.session;
+        res.redirect('/login');
+    },
     //register ---------------------------------------------------------------------------------------------------------
     register: function (req, res) {
         console.log('register Call');
-        session = req.session;
-        res.locals.isLoggedIn = session.isLoggedIn;
         res.render('register', { title: 'Register' });
     },
     //profile ----------------------------------------------------------------------------------------------------------
@@ -60,8 +66,7 @@ module.exports = {
         console.log('profile Call');
         session = req.session;
         if(session.email) {
-            res.locals.isLoggedIn = session.isLoggedIn;
-            res.render('profile', { title: 'Profile' });
+            res.render('profile', { title: 'Profile', session:session });
         }
         else {
             res.redirect('/login');
@@ -70,20 +75,19 @@ module.exports = {
     //settings ---------------------------------------------------------------------------------------------------------
     settings: function (req, res) {
         console.log('settings Call');
-        res.locals.isLoggedIn = session.isLoggedIn;
-        res.render('settings', { title: 'Settings'});
+        session = req.session;
+        res.render('settings', { title: 'Settings', session:session});
     },
     //search -----------------------------------------------------------------------------------------------------------
     search: function (req, res) {
-        res.locals.isLoggedIn = session.isLoggedIn;
-        res.render('search', { title: 'Search'});
+        session = req.session;
+        res.render('search', { title: 'Search', session:session});
     },
     //hot properties ---------------------------------------------------------------------------------------------------
     hot_properties: function (req, res) {
         console.log('hot properties Call');
-        res.locals.isLoggedIn = session.isLoggedIn;
         session = req.session;
-        res.render('hot_properties', { title: 'Hot Properties'});
+        res.render('hot_properties', { title: 'Hot Properties', session:session});
     },
     //error ------------------------------------------------------------------------------------------------------------
     error: function (req, res) {
@@ -108,3 +112,14 @@ module.exports = {
         })
     }
 };
+
+/*
+    Sessions: * seeions are held within the req.session object.
+                when a update is made to the session you first change the req session obj eg. req.session.isLoggedIn = false;
+                Then set session = req.session to update session var.
+
+    Update database value: *
+
+                 userEntry.findOneAndUpdate(query, update, options, callback);
+
+*/

@@ -30,6 +30,8 @@ router.get('/', routesCall.home);
 router.post('/login', routesCall.login_post);
 //Login
 router.get('/login', routesCall.login);
+//Logout
+router.get('/logout', routesCall.logout);
 //Register
 router.get('/register', routesCall.register);
 //Profile

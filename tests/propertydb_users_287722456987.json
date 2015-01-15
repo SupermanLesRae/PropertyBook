@@ -1,0 +1,6 @@
+{ "_id" : { "$oid" : "54b7915a912a895230b908ab" }, "name" : "Les-Rae", "email" : "superman.lesrae111@gmail.com", "password" : "sha1$1d09a078$1$3183ec0337ae2a6d54889c7a28fe24713f21018f" }
+{ "_id" : { "$oid" : "54b7d123d5bfd06c1d0e5088" }, "name" : "Suresh", "email" : "suresh@gmail.com", "password" : "sha1$1d09a078$1$3183ec0337ae2a6d54889c7a28fe24713f21018f" }
+{ "_id" : { "$oid" : "54b7d146d5bfd06c1d0e5089" }, "name" : "Pabi", "email" : "pabi@gmail.com", "password" : "sha1$1d09a078$1$3183ec0337ae2a6d54889c7a28fe24713f21018f" }
+{ "_id" : { "$oid" : "54b7d157d5bfd06c1d0e508a" }, "name" : "Kenzo", "email" : "kenzo@gmail.com", "password" : "sha1$1d09a078$1$3183ec0337ae2a6d54889c7a28fe24713f21018f" }
+{ "_id" : { "$oid" : "54b7d16ad5bfd06c1d0e508b" }, "name" : "Kgosi", "email" : "kgosi@gmail.com", "password" : "sha1$1d09a078$1$3183ec0337ae2a6d54889c7a28fe24713f21018f" }
+{ "_id" : { "$oid" : "54b7d229d5bfd06c1d0e508c" }, "name" : "test", "email" : "test@gmail.com", "password" : "sha1$1d09a078$1$3183ec0337ae2a6d54889c7a28fe24713f21018f" }
