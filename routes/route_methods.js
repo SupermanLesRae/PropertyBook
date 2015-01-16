@@ -25,8 +25,12 @@ module.exports = {
     },
     //login ------------------------------------------------------------------------------------------------------------
     login: function (req, res) {
-        console.log('login Call');
-        session = req.session;
+        console.log('login Call: ');
+        if(session.isLoggedIn) {
+            req.session.isLoggedIn = false;
+            session = req.session;
+            req.flash('goodbye', 'You have been successfully logged out');
+        }
         res.render('login', { title: 'Login', session:session});
     },
     //Login Post -------------------------------------------------------------------------------------------------------
@@ -41,28 +45,27 @@ module.exports = {
                 if(passwordHash.verify(req.body.password, entries.password) && req.body.email == entries.email) {
                     req.session.email = req.body.email;
                     req.session.isLoggedIn = true;
+                    req.session.name = entries.name;
                     session = req.session;
                     return res.redirect('/profile')
                 }
                 else {
+                    req.flash('info', ['username / password incorrect']);
                     res.render('login', { title: 'Login', session: session });
                 }
             }
         })
-
     },
     //logout -----------------------------------------------------------------------------------------------------------
     logout: function (req, res) {
         console.log('logout Call');
-        req.session.isLoggedIn = false;
-        session = req.session;
+        req.flash('goodbye', 'Flash Message Added');
         res.redirect('/login');
     },
     //register ---------------------------------------------------------------------------------------------------------
     register: function (req, res) {
         console.log('register Call');
         session = req.session;
-
         res.render('register', { title: 'Register', session: session});
     },
     //register ---------------------------------------------------------------------------------------------------------
@@ -78,7 +81,7 @@ module.exports = {
                  console.log('add new user');
                 }
                 else {
-                    req.flash('info', ['Email already exists', 'name must be 2 char min']);
+                    req.flash('info', ['Email already exists']);
                     res.render('register', { title: 'Register', session:session });
                 }
             }
@@ -87,9 +90,9 @@ module.exports = {
     },
     //profile ----------------------------------------------------------------------------------------------------------
     profile: function (req, res) {
-        console.log('profile Call');
-        session = req.session;
+        console.log('profile Call: ', session.name);
         if(session.email) {
+            req.flash('welcome', [session.name]);
             res.render('profile', { title: 'Profile', session:session });
         }
         else {

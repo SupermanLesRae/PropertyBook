@@ -21,6 +21,14 @@
 
         <div class="container">
 
+            <% if (messages.goodbye) { %>
+            <div class="alert alert-success">
+                <% for(var i=0; i<messages.goodbye.length; i++) { %>
+                <p><%= messages.goodbye[i] %></p>
+                <% } %>
+            </div>
+            <% } %>
+
             <form action="/login" role="form" method="post" class="form-horizontal">
                 <fieldset>
                     <legend>Login to your account</legend>
