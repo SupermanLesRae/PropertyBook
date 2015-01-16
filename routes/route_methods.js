@@ -37,7 +37,7 @@ module.exports = {
             }
             else {
                 if(passwordHash.verify(req.body.password, entries.password) && req.body.email == entries.email) {
-                    session.email = req.body.email;
+                    req.session.email = req.body.email;
                     req.session.isLoggedIn = true;
                     session = req.session;
                     return res.redirect('/profile')
@@ -59,7 +59,25 @@ module.exports = {
     //register ---------------------------------------------------------------------------------------------------------
     register: function (req, res) {
         console.log('register Call');
-        res.render('register', { title: 'Register' });
+        res.render('register', { title: 'Register', session:session });
+    },
+    //register ---------------------------------------------------------------------------------------------------------
+    register_post: function (req, res) {
+        console.log('register Post Call: ' + req.body.email);
+        userEntry.findOne({email:req.body.email},function(err, entries) {
+            if(err) {
+                console.log('404 Error')
+            }
+            else {
+                if(entries == null) {
+                 console.log('add new user');
+                }
+                else {
+                    console.log('user already exists please add a new email');
+                }
+            }
+        })
+
     },
     //profile ----------------------------------------------------------------------------------------------------------
     profile: function (req, res) {

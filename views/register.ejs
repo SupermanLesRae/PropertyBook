@@ -9,7 +9,7 @@
 
 <div class="section-content-header">
     <ul class="breadcrumb" style="margin-bottom: 5px;">
-        <li class="active">SignIn</li>
+        <li class="active">Register</li>
     </ul>
 </div>
 
@@ -21,13 +21,19 @@
 
         <div class="container">
 
-            <form class="form-horizontal">
+            <form action="/register" role="form" method="post" class="form-horizontal">
                 <fieldset>
                     <legend>Enter details below to create your account</legend>
                     <div class="form-group">
-                        <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                        <label for="inputName" class="col-lg-2 control-label">Your Name</label>
                         <div class="col-lg-10">
-                            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                            <input type="text" class="form-control" id="inputName" placeholder="Your Name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="col-lg-2 control-label">Email</label>
+                        <div class="col-lg-10">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email">
                         </div>
                     </div>
                     <div class="form-group">
@@ -44,13 +50,13 @@
                     </div>
                     <div class="form-group">
                         <div class="col-lg-10 col-lg-offset-2">
-                            <p>Once you have signed in please follow the link in the email to complete your profile information</p>
+                            <p> <small><span style="font-style: italic;">Once you have registered please follow the link in your email to complete your profile information.</span></small> </p>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-lg-10 col-lg-offset-2">
                             <a href="/login" class="btn btn-default">Login</a>
-                            <a type="submit" class="btn btn-primary">Submit</a>
+                            <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
                     </div>
                 </fieldset>

@@ -34,6 +34,8 @@ router.get('/login', routesCall.login);
 router.get('/logout', routesCall.logout);
 //Register
 router.get('/register', routesCall.register);
+//Register Post
+router.post('/register', routesCall.register_post);
 //Profile
 router.get('/profile', routesCall.profile);
 //Settings
