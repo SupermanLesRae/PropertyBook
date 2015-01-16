@@ -24,6 +24,17 @@
             <form action="/register" role="form" method="post" class="form-horizontal">
                 <fieldset>
                     <legend>Enter details below to create your account</legend>
+
+                    <% if (messages.info) { %>
+                        <div class="alert alert-danger">
+                            <ul>
+                                <% for(var i=0; i<messages.info.length; i++) { %>
+                                    <li><%= messages.info[i] %></li>
+                                <% } %>
+                            </ul>
+                        </div>
+                    <% } %>
+
                     <div class="form-group">
                         <label for="inputName" class="col-lg-2 control-label">Your Name</label>
                         <div class="col-lg-10">

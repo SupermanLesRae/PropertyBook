@@ -4,6 +4,7 @@
 var mongoose = require('mongoose');
 var passwordHash = require('password-hash');
 var userEntry = require('../models/userEntry');
+
 var db = mongoose.connection;
 db.on('error', function() {
     console.log('db error');
@@ -12,6 +13,7 @@ mongoose.connect('mongodb://localhost:27017/propertydb');
 var session = {
     isLoggedIn:false
 };
+
 
 module.exports = {
 
@@ -25,7 +27,7 @@ module.exports = {
     login: function (req, res) {
         console.log('login Call');
         session = req.session;
-        res.render('login', { title: 'Login',  errorMsg:'', session:session});
+        res.render('login', { title: 'Login', session:session});
     },
     //Login Post -------------------------------------------------------------------------------------------------------
     login_post: function (req, res) {
@@ -43,7 +45,7 @@ module.exports = {
                     return res.redirect('/profile')
                 }
                 else {
-                    res.render('login', { title: 'Login', errorMsg: 'password / email incorrect' });
+                    res.render('login', { title: 'Login', session: session });
                 }
             }
         })
@@ -59,11 +61,14 @@ module.exports = {
     //register ---------------------------------------------------------------------------------------------------------
     register: function (req, res) {
         console.log('register Call');
-        res.render('register', { title: 'Register', session:session });
+        session = req.session;
+
+        res.render('register', { title: 'Register', session: session});
     },
     //register ---------------------------------------------------------------------------------------------------------
     register_post: function (req, res) {
         console.log('register Post Call: ' + req.body.email);
+        session = req.session;
         userEntry.findOne({email:req.body.email},function(err, entries) {
             if(err) {
                 console.log('404 Error')
@@ -73,7 +78,8 @@ module.exports = {
                  console.log('add new user');
                 }
                 else {
-                    console.log('user already exists please add a new email');
+                    req.flash('info', ['Email already exists', 'name must be 2 char min']);
+                    res.render('register', { title: 'Register', session:session });
                 }
             }
         })
