@@ -39,7 +39,7 @@ router.post('/register', routesCall.register_post);
 //Profile
 router.get('/profile', routesCall.profile);
 //Settings
-router.get('/settings', routesCall.profile);
+router.get('/settings', routesCall.settings);
 //Hot Properties
 router.get('/hot', routesCall.hot_properties);
 //Search

@@ -19,23 +19,21 @@ module.exports = {
 
     //landing ----------------------------------------------------------------------------------------------------------
     home: function (req, res) {
-        console.log('Home Call');
-        session = req.session;
         res.render('index', { title: 'Home', session:session});
     },
     //login ------------------------------------------------------------------------------------------------------------
     login: function (req, res) {
-        console.log('login Call: ');
-        if(session.isLoggedIn) {
-            req.session.isLoggedIn = false;
-            session = req.session;
-            req.flash('goodbye', 'You have been successfully logged out');
+
+        if(session.hasUserLoggedOut){
+            req.flash('goodbye', ['Logout successful, goodbye']);
+            console.log('session.hasUserLoggedOut: ' + session.hasUserLoggedOut);
+            session.hasUserLoggedOut = false;
         }
         res.render('login', { title: 'Login', session:session});
     },
     //Login Post -------------------------------------------------------------------------------------------------------
     login_post: function (req, res) {
-        console.log('login post Call');
+        session = req.session;
         userEntry.findOne({email:req.body.email},function(err, entries) {
             if(err) {
                 console.log('db error');
@@ -43,10 +41,10 @@ module.exports = {
             }
             else {
                 if(passwordHash.verify(req.body.password, entries.password) && req.body.email == entries.email) {
-                    req.session.email = req.body.email;
-                    req.session.isLoggedIn = true;
-                    req.session.name = entries.name;
-                    session = req.session;
+                    session.email = req.body.email;
+                    session.isLoggedIn = true;
+                    session.hasUserLoggedOut = false;
+                    session.name = entries.name;
                     return res.redirect('/profile')
                 }
                 else {
@@ -58,20 +56,18 @@ module.exports = {
     },
     //logout -----------------------------------------------------------------------------------------------------------
     logout: function (req, res) {
-        console.log('logout Call');
-        req.flash('goodbye', 'Flash Message Added');
+        session = req.session;
+        session.hasUserLoggedOut = true;
+        session.isLoggedIn = false;
+        session.email = null;
         res.redirect('/login');
     },
     //register ---------------------------------------------------------------------------------------------------------
     register: function (req, res) {
-        console.log('register Call');
-        session = req.session;
         res.render('register', { title: 'Register', session: session});
     },
     //register ---------------------------------------------------------------------------------------------------------
     register_post: function (req, res) {
-        console.log('register Post Call: ' + req.body.email);
-        session = req.session;
         userEntry.findOne({email:req.body.email},function(err, entries) {
             if(err) {
                 console.log('404 Error')
@@ -90,8 +86,7 @@ module.exports = {
     },
     //profile ----------------------------------------------------------------------------------------------------------
     profile: function (req, res) {
-        console.log('profile Call: ', session.name);
-        if(session.email) {
+        if(session.isLoggedIn) {
             req.flash('welcome', [session.name]);
             res.render('profile', { title: 'Profile', session:session });
         }
@@ -101,19 +96,19 @@ module.exports = {
     },
     //settings ---------------------------------------------------------------------------------------------------------
     settings: function (req, res) {
-        console.log('settings Call');
-        session = req.session;
-        res.render('settings', { title: 'Settings', session:session});
+        if(session.isLoggedIn){
+            res.render('settings', { title: 'Settings', session:session});
+        }
+        else {
+            res.redirect('/login');
+        }
     },
     //search -----------------------------------------------------------------------------------------------------------
     search: function (req, res) {
-        session = req.session;
         res.render('search', { title: 'Search', session:session});
     },
     //hot properties ---------------------------------------------------------------------------------------------------
     hot_properties: function (req, res) {
-        console.log('hot properties Call');
-        session = req.session;
         res.render('hot_properties', { title: 'Hot Properties', session:session});
     },
     //error ------------------------------------------------------------------------------------------------------------
