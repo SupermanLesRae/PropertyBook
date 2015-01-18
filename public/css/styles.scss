@@ -19,7 +19,14 @@ h2 {
 }
 
 
+.navbar i {
+  position:absolute; color:#E3F2FD; margin-left:155px;
+  @media screen and (max-width: $break-small) {
+    margin-left:0px;
+    margin-top: 4px;
+  }
 
+}
 #materialPreloader {
   z-index: 999999;
   background: white;
@@ -41,19 +48,22 @@ h2 {
     }
     @media screen and (max-width: $break-small) {
       //font-size: 18px;
+      display:none;
     }
   }//section-title
 }//navbar-header
 
 .sidebar-wrapper {
-  top: 148px;
+  top: 50px;
+
 }
 
 .sidebar-toggle {
 
+  top:45px;
   color: white!important;
   @media screen and (max-width: $break-small) {
-    top: 0px!important;
+    //top: 45px!important;
   }
 }
 
@@ -72,12 +82,13 @@ h2 {
   right: 0!important;
   @media screen and (max-width: $break-small) {
    // left: 20px!important;
-    margin-top: 80px!important;
+    //margin-top: 80px!important;
   }
 }
 
 .nav-menu-divider {
-  margin-top: 19px;
+  color:white;
+  margin-top: 14px;
   @media screen and (max-width: $break-large) {
     margin-top: 14px;
   }
@@ -85,10 +96,10 @@ h2 {
 
 #floating-action-button {
   .navbar {
-    padding-top: 20px;
-    padding-bottom: 90px;
-    padding-left: 40px;
-    background-image: url("../img/header_right_bg.png");
+    padding-top: 7px;
+//    padding-bottom: 90px;
+    padding-left: 20px;
+//    background-image: url("../img/header_right_bg.png");
     background-repeat: no-repeat;
     background-position: right;
   }//navbar
@@ -118,9 +129,9 @@ h2 {
   position:fixed;
   width:100%;
   height:50px;
-  background: #e46e70;
-  top: 146px;
-  box-shadow: 0px 2px 5px #8f3b3d;
+  background: #2196F3;
+  top: 50px;
+  box-shadow: 0px 2px 5px #667084;
   z-index: 1000;
 
   p {
@@ -145,7 +156,7 @@ h2 {
   position: relative;
   top:0;
   left: 0;
-  margin-top:250px;
+  margin-top:150px;
 
   .innerWrapper {
     position: relative;

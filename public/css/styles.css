@@ -11,6 +11,15 @@ h1 {
 h2 {
   font-size: 36px; }
 
+.navbar i {
+  position: absolute;
+  color: #E3F2FD;
+  margin-left: 155px; }
+  @media screen and (max-width: 480px) {
+    .navbar i {
+      margin-left: 0px;
+      margin-top: 4px; } }
+
 #materialPreloader {
   z-index: 999999;
   background: white;
@@ -25,15 +34,16 @@ h2 {
   overflow: hidden;
   width: 100%;
   white-space: nowrap; }
+  @media screen and (max-width: 480px) {
+    .navbar-header .section-title {
+      display: none; } }
 
 .sidebar-wrapper {
-  top: 148px; }
+  top: 50px; }
 
 .sidebar-toggle {
+  top: 45px;
   color: white !important; }
-  @media screen and (max-width: 480px) {
-    .sidebar-toggle {
-      top: 0px !important; } }
 
 .nav > li {
   position: relative;
@@ -47,21 +57,17 @@ h2 {
   margin-top: 0 !important;
   position: absolute !important;
   right: 0 !important; }
-  @media screen and (max-width: 480px) {
-    .navbar-nav {
-      margin-top: 80px !important; } }
 
 .nav-menu-divider {
-  margin-top: 19px; }
+  color: white;
+  margin-top: 14px; }
   @media screen and (max-width: 1280px) {
     .nav-menu-divider {
       margin-top: 14px; } }
 
 #floating-action-button .navbar {
-  padding-top: 20px;
-  padding-bottom: 90px;
-  padding-left: 40px;
-  background-image: url("../img/header_right_bg.png");
+  padding-top: 7px;
+  padding-left: 20px;
   background-repeat: no-repeat;
   background-position: right; }
 #floating-action-button .btn {
@@ -84,9 +90,9 @@ h2 {
   position: fixed;
   width: 100%;
   height: 50px;
-  background: #e46e70;
-  top: 146px;
-  box-shadow: 0px 2px 5px #8f3b3d;
+  background: #2196F3;
+  top: 50px;
+  box-shadow: 0px 2px 5px #667084;
   z-index: 1000; }
   .section-content-header p {
     text-transform: uppercase;
@@ -106,7 +112,7 @@ h2 {
   position: relative;
   top: 0;
   left: 0;
-  margin-top: 250px; }
+  margin-top: 150px; }
   .outerWrapper .innerWrapper {
     position: relative; }
 

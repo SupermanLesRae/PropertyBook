@@ -4626,8 +4626,8 @@ legend {
 }
 .navbar .navbar-nav > li > a {
   color: rgba(255, 255, 255, 0.84);
-  padding-top: 20px;
-  padding-bottom: 20px;
+
+  padding-bottom: 15px;
 }
 .navbar .navbar-nav > li > a:hover,
 .navbar .navbar-nav > li > a:focus {
@@ -4823,7 +4823,7 @@ fieldset[disabled] .navbar .btn-link:focus {
 }
 
 .navbar-material-eclair {
-  background-color: #e64d4f;
+  background-color: #1976D2;
 }
 
 .navbar-material-honeycomb {
