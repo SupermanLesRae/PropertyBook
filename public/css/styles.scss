@@ -20,9 +20,9 @@ h2 {
 
 
 .navbar i {
-  position:absolute; color:#E3F2FD; margin-left:155px;
+  position:absolute; color:#E3F2FD; left:180px;
   @media screen and (max-width: $break-small) {
-    margin-left:0px;
+    left:20px;
     margin-top: 4px;
   }
 

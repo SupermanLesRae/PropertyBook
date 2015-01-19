@@ -26,6 +26,7 @@ router.get('/entries', function(req, res) {
 
 //Home
 router.get('/', routesCall.home);
+router.get('/posts', routesCall.posts);
 //Login Post
 router.post('/login', routesCall.login_post);
 //Login

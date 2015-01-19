@@ -18,8 +18,12 @@ var session = {
 module.exports = {
 
     //landing ----------------------------------------------------------------------------------------------------------
+    posts: function (req, res) {
+        res.render('posts', { title: 'Home', session:session});
+    },
+    //home ----------------------------------------------------------------------------------------------------------
     home: function (req, res) {
-        res.render('index', { title: 'Home', session:session});
+        res.render('home', { title: 'Home', session:session});
     },
     //login ------------------------------------------------------------------------------------------------------------
     login: function (req, res) {

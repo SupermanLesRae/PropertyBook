@@ -14,10 +14,10 @@ h2 {
 .navbar i {
   position: absolute;
   color: #E3F2FD;
-  margin-left: 155px; }
+  left: 180px; }
   @media screen and (max-width: 480px) {
     .navbar i {
-      margin-left: 0px;
+      left: 20px;
       margin-top: 4px; } }
 
 #materialPreloader {
