@@ -2280,7 +2280,7 @@ h6,
 .h2,
 .h3,
 .h4 {
-  font-family: "RobotoDraft", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", "RobotoDraft", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
 }
 h5,
@@ -2646,9 +2646,11 @@ body .jumbotron-material-lightgrey,
 }
 .btn:hover:not(.btn-link):not(.btn-flat) {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.23), 0 10px 30px rgba(0, 0, 0, 0.19);
+  color: rgba(255, 255, 255, 0.84);
 }
 .btn:active:not(.btn-link):not(.btn-flat) {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.23), 0 10px 30px rgba(0, 0, 0, 0.19);
+  color: rgba(255, 255, 255, 0.84);
 }
 .btn:not(.btn-link):not(.btn-flat),
 .btn-default:not(.btn-link):not(.btn-flat) {

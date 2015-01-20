@@ -98,3 +98,51 @@ if(!$("html").hasClass("touch")){
     parallaxPosition();
 }
 
+$(document).ready(function(){
+
+    $('.homewrapper').fadeIn('slow');
+
+    $('#getStartedBtn').click(function(e) {
+        $('html, body').animate({
+            scrollTop: ($("#screen02").offset().top),
+            easing: "easein"
+        }, 500);
+        e.preventDefault();// to prevent default working of anchor;
+    });
+    $('#getStartedContent').click(function(e) {
+        $('html, body').animate({
+            scrollTop: ($("#screen03").offset().top),
+            easing: "easein"
+        }, 500);
+        e.preventDefault();// to prevent default working of anchor;
+    });
+    $('#ourServices').click(function(e) {
+        $('html, body').animate({
+            scrollTop: ($("#screen04").offset().top),
+            easing: "easein"
+        }, 500);
+        e.preventDefault();// to prevent default working of anchor;
+    });
+    $('#serviceContent').click(function(e) {
+        $('html, body').animate({
+            scrollTop: ($("#screen05").offset().top),
+            easing: "easein"
+        }, 500);
+        e.preventDefault();// to prevent default working of anchor;
+    });
+    $('#ourPrices').click(function(e) {
+        $('html, body').animate({
+            scrollTop: ($("#screen06").offset().top),
+            easing: "easein"
+        }, 500);
+        e.preventDefault();// to prevent default working of anchor;
+    });
+    $('#priceContent').click(function(e) {
+        $('html, body').animate({
+            scrollTop: ($("#screen01").offset().top),
+            easing: "easein"
+        }, 500);
+        e.preventDefault();// to prevent default working of anchor;
+    });
+});
+

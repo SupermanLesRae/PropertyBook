@@ -3,116 +3,100 @@
 <head>
     <% include partials/head.ejs %>
     <link rel="stylesheet" href="css/style.css"/>
-    <style>
-        .logo {
-            display: block;
-            background: url(img/right133.svg);
-            background-position: 200% 50%!important;
-            background-size: 70%!important;
-            background-repeat: no-repeat;
-        }
-        .logo2 {
-            display: block;
-            background: url(img/division.svg);
-            background-position: 170% 50%!important;
-            background-size: 60%!important;
-            background-repeat: no-repeat;
-        }
-        .logo3 {
-            display: block;
-            background: url(img/multiplication.svg);
-            background-position: 230% 50%!important;
-            background-size: 70%!important;
-            background-repeat: no-repeat;
-        }
-        .logo4 {
-            display: block;
-            background: url(img/division.svg);
-            background-position: 160% 50%!important;
-            background-size: 60%!important;
-            background-repeat: no-repeat;
-        }
 
-        h1, h2, h3 {
-            margin-left:15px!important;
-            margin-right:15px!important;
-        }
-    </style>
 </head>
 <body>
 
-<div class="fullscreen background parallax logo" style="background-color: #03a9f4;" data-img-width="1600" data-img-height="1064" data-diff="100">
-    <div class="content-a">
-        <div class="content-b">
-            <h1>You'r just one click, from finding your dream Home.</h1>
+<div class="homewrapper">
+
+    <div id="screen01" class="fullscreen background parallax logo" style="background-color: #03a9f4;" data-img-width="1600" data-img-height="1064" data-diff="100">
+        <div class="content-a">
+            <div class="content-b">
+                <h1 style="padding-right:0px;">welcome to</h1>
+                <h2 style="padding-right:0px;" >propertybook</h2>
+            </div>
+        </div>
+
+        <div id="getStartedBtnTxt" >
+            <p style="">Get Started</p>
+        </div>
+        <button id="getStartedBtn" class="btn btn-getstarted btn-info btn-fab mdi-hardware-keyboard-arrow-down btn-position"></button>
+
+    </div>
+
+    <div id="screen02" class="not-fullscreen background parallax" style="background-color: #ffffff;" data-img-width="1600" data-img-height="1064" data-diff="100">
+        <div class="content-a">
+            <div class="content-b">
+                white image block
+            </div>
+        </div>
+
+    </div>
+
+    <section class="not-fullscreen">
+        <div class="content-a">
+            <div class="content-b">
+                Centered content
+            </div>
+        </div>
+        <button  id="getStartedContent" class="btn btn-getstarted btn-primary btn-fab mdi-hardware-keyboard-arrow-down btn-position"></button>
+    </section>
+
+    <div id="screen03" class="fullscreen background parallax logo2" style="background-color: #e91e63;" data-img-width="1600" data-img-height="1064" data-diff="100" data-oriz-pos="100%">
+        <div class="content-a">
+            <div class="content-b">
+                <h1 style="padding-right:0px;">our</h1>
+                <h2 style="padding-right:0px;" >services</h2>
+            </div>
+        </div>
+        <button id="ourServices" class="btn btn-getstarted btn-material-pink btn-fab mdi-hardware-keyboard-arrow-down btn-position"></button>
+    </div>
+
+    <div  id="screen04" class="not-fullscreen background parallax" style="background-color: #ffffff;" data-img-width="1600" data-img-height="1064" data-diff="100">
+        <div class="content-a">
+            <div class="content-b">
+                Centered content
+            </div>
         </div>
     </div>
+
+    <section class="not-fullscreen">
+        <div class="content-a">
+            <div class="content-b">
+                Centered content
+            </div>
+        </div>
+        <button id="serviceContent" class="btn btn-getstarted btn-primary btn-fab mdi-hardware-keyboard-arrow-down btn-position"></button>
+    </section>
+
+    <div id="screen05" class="fullscreen background parallax logo3" style="background-color: #9c27b0;" data-img-width="1600" data-img-height="1064" data-diff="100" data-oriz-pos="100%">
+        <div class="content-a">
+            <div class="content-b">
+                <h1 style="padding-right:0px;">our</h1>
+                <h2 style="padding-right:0px;" >Prices</h2>
+            </div>
+        </div>
+        <button id="ourPrices" class="btn btn-getstarted btn-material-purple btn-fab mdi-hardware-keyboard-arrow-down btn-position"></button>
+    </div>
+
+    <div id="screen06" class="not-fullscreen background parallax" style="background-color: #ffffff;" data-img-width="1600" data-img-height="1064" data-diff="100">
+        <div class="content-a">
+            <div class="content-b">
+                Centered content
+            </div>
+        </div>
+    </div>
+
+    <section class="not-fullscreen">
+        <div class="content-a">
+            <div class="content-b">
+                Centered content
+            </div>
+        </div>
+        <button id="priceContent" class="btn btn-getstarted btn-primary btn-fab mdi-hardware-keyboard-arrow-up btn-position"></button>
+    </section>
+
 </div>
-
-<div class="not-fullscreen background parallax" style="background-color: #ffffff;" data-img-width="1600" data-img-height="1064" data-diff="100">
-    <div class="content-a">
-        <div class="content-b">
-            white image block
-        </div>
-    </div>
-</div>
-
-<section class="not-fullscreen">
-    <div class="content-a">
-        <div class="content-b">
-            Centered content
-        </div>
-    </div>
-</section>
-
-<div class="fullscreen background parallax logo2" style="background-color: #e91e63;" data-img-width="1600" data-img-height="1064" data-diff="100" data-oriz-pos="100%">
-    <div class="content-a">
-        <div class="content-b">
-            <h1>Keep up to date with the latest properties available.</h1>
-        </div>
-    </div>
-</div>
-
-<div class="not-fullscreen background parallax" style="background-color: #ffffff;" data-img-width="1600" data-img-height="1064" data-diff="100">
-    <div class="content-a">
-        <div class="content-b">
-            Centered content
-        </div>
-    </div>
-</div>
-
-<section class="not-fullscreen">
-    <div class="content-a">
-        <div class="content-b">
-            Centered content
-        </div>
-    </div>
-</section>
-
-<div class="fullscreen background parallax logo3" style="background-color: #9c27b0;" data-img-width="1600" data-img-height="1064" data-diff="100" data-oriz-pos="100%">
-    <div class="content-a">
-        <div class="content-b">
-            <h1>Need A Bigger Home?</h1>
-            <h2>No problem put yours up for sale.</h2>
-        </div>
-    </div>
-</div>
-
-<div class="not-fullscreen background parallax" style="background-color: #ffffff;" data-img-width="1600" data-img-height="1064" data-diff="100">
-    <div class="content-a">
-        <div class="content-b">
-            Centered content
-        </div>
-    </div>
-</div>
-
-<section class="not-fullscreen">
-    <div class="content-a">
-        <div class="content-b">
-            Centered content
-        </div>
-    </div>
-</section>
 
 <!-- include jQuery -->
 <% include partials/scripts.ejs %>
