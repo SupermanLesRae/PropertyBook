@@ -161,6 +161,7 @@
 .sidebar-wrapper.sidebar-default .sidebar-item > a {
   color: #222222;
   background-color: #ffffff;
+  font-weight: normal;
 }
 .sidebar-wrapper.sidebar-default .sidebar-item > a:hover,
 .sidebar-wrapper.sidebar-default .sidebar-item > a:focus {
