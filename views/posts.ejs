@@ -1,227 +1,197 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <% include partials/head.ejs %>
-  <style>
-    *, *:before, *:after {box-sizing:  border-box !important;}
-    .row {
-      -moz-column-width: 18em;
-      -webkit-column-width: 18em;
-      -moz-column-gap: 1em;
-      -webkit-column-gap:1em;
+  <head>
+    <% include partials/head.ejs %>
+  </head>
+  <body>
 
-    }
+  <% include partials/navbar.ejs %>
 
-    .item {
-      position:relative;
-      width:  100%;
-    }
-
-
-  </style>
-</head>
-<body>
-
-<% include partials/navbar.ejs %>
-
-<div class="section-content-header">
-  <ul class="breadcrumb" style="margin-bottom: 5px;">
-    <li class="active">Latest post</li>
-  </ul>
-</div>
-
-<div class="outerWrapper">
-
-  <div class="innerWrapper">
-
-    <% include partials/sidebar.ejs %>
-
-    <div class="container">
-      <div class="row">
-        <div class="item">
-          <div class="well">
-            1 blah blah blah
-          </div>
-        </div>
-
-
-        <div class="item">
-          <div class="panel panel-material-orange">
-
-            <div class="panel-heading">
-              <h3 class="panel-title"><i class="fa fa-home"></i> Mild Property</h3>
-            </div>
-            <div class="panel-body">
-              When a new property is added to a users account, it will be represented by this green color
-            </div>
-
-          </div><!-- panel -->
-
-
-          <div class="overlay-cards">
-            <ul>
-              <li> <a href="#"><i class="mdi-action-room btn-warning"></i></a></li>
-              <li><a href="#"><i class="mdi-communication-call btn-warning"></i></a></li>
-              <li><a href="#"><i class="mdi-image-photo btn-warning"></i></a></li>
-              <li><a href=""><i class="mdi-content-archive btn-warning"></i></a></li>
-            </ul>
-          </div>
-
-        </div>
-
-
-
-        <div class="item">
-          <div class="panel panel-success">
-            <div class="panel-heading">
-              <h3 class="panel-title"> <i class="fa fa-home"></i> Sold Property</h3>
-            </div>
-            <div class="panel-info-header">
-              <p> <i class="mdi-social-group"></i> Person/Company<i class="mdi-navigation-chevron-right"></i>
-            </div>
-            <div class="panel-body">
-              When a property is sold the user will add the sold tag and the panel will be represented by this green color.
-              once a property is sold it will have a limited time before it is removed from the home post timeline.
-              <br><br>
-              When the user sets there sold to true this will improved their rating status
-            </div>
-          </div><!-- panel -->
-
-          <div class="overlay-cards">
-            <ul>
-              <li> <a href="#"><i class="mdi-action-room btn-success"></i></a></li>
-              <li><a href="#"><i class="mdi-communication-call btn-success"></i></a></li>
-              <li><a href="#"><i class="mdi-image-photo btn-success"></i></a></li>
-              <li><a href=""><i class="mdi-content-archive btn-success"></i></a></li>
-            </ul>
-          </div>
-
-        </div>
-
-
-        <div class="item">
-          <div class="panel panel-material-orange">
-            <div class="panel-heading">
-              <h3 class="panel-title"><i class="fa fa-home"></i> Mild Property</h3>
-              <div class="panel-icon-holder">
-                <ul>
-                  <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="mdi-content-sort"></i></a>
-                    <ul class="dropdown-menu label-material-orange">
-                      <li> <a href="#"><i class="mdi-action-room"></i></a></li>
-                      <li><a href="#"><i class="mdi-communication-call"></i></a></li>
-                      <li><a href="#"><i class="mdi-image-photo"></i></a></li>
-                      <li><a href=""><i class="mdi-content-archive"></i></a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="panel-info-header">
-              <p> <i class="mdi-social-group"></i> Person/Company</p> <i class="mdi-navigation-chevron-right"></i>
-            </div>
-            <div class="panel-body">
-              When a new property is added to a users account, it will be represented by this green color
-            </div>
-          </div><!-- panel -->
-        </div>
-        <div class="item">
-          <div class="panel panel-danger">
-            <div class="panel-heading">
-              <h3 class="panel-title"><i class="fa fa-home"></i> Hot Property</h3>
-              <div class="panel-icon-holder">
-                <ul>
-                  <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="mdi-content-sort"></i></a>
-                    <ul class="dropdown-menu label-danger">
-                      <li> <a href="#"><i class="mdi-action-room"></i></a></li>
-                      <li><a href="#"><i class="mdi-communication-call"></i></a></li>
-                      <li><a href="#"><i class="mdi-image-photo"></i></a></li>
-                      <li><a href=""><i class="mdi-content-archive"></i></a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="panel-info-header">
-              <p> <i class="mdi-social-group"></i> Person/Company</p> <i class="mdi-navigation-chevron-right"></i>
-            </div>
-            <div class="panel-body">
-              For every 5 Properties added a company can set one property as a hot property
-            </div>
-          </div><!-- panel -->
-        </div>
-        <div class="item">
-          <div class="well">
-            blah blah blah blah
-          </div>
-        </div>
-        <div class="item">
-          <div class="panel panel-material-purple">
-            <div class="panel-heading">
-              <h3 class="panel-title"><i class="fa fa-home"></i> New Property Added</h3>
-              <div class="panel-icon-holder">
-                <ul>
-                  <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="mdi-content-sort"></i></a>
-                    <ul class="dropdown-menu label-material-purple">
-                      <li> <a href="#"><i class="mdi-action-room"></i></a></li>
-                      <li><a href="#"><i class="mdi-communication-call"></i></a></li>
-                      <li><a href="#"><i class="mdi-image-photo"></i></a></li>
-                      <li><a href=""><i class="mdi-content-archive"></i></a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="panel-info-header">
-              <p> <i class="mdi-social-group"></i> Person/Company</p> <i class="mdi-navigation-chevron-right"></i>
-            </div>
-            <div class="panel-body">
-              When a new property is added to a users account, it will be represented by this green color
-            </div>
-          </div><!-- panel -->
-        </div>
-        <div class="item">
-          <div class="panel panel-info">
-            <div class="panel-heading">
-              <h3 class="panel-title"><i class="fa fa-home"></i> Cold Property</h3>
-              <div class="panel-icon-holder">
-                <ul>
-                  <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="mdi-content-sort"></i></a>
-                    <ul class="dropdown-menu label-info">
-                      <li> <a href="#"><i class="mdi-action-room"></i></a></li>
-                      <li><a href="#"><i class="mdi-communication-call"></i></a></li>
-                      <li><a href="#"><i class="mdi-image-photo"></i></a></li>
-                      <li><a href=""><i class="mdi-content-archive"></i></a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="panel-info-header">
-              <p> <i class="mdi-social-group"></i> Person/Company</p> <i class="mdi-navigation-chevron-right"></i>
-            </div>
-            <div class="panel-body">
-              This Property has been online for a while so it's status is cold
-            </div>
-          </div><!-- panel -->
-        </div>
-        <div class="item">
-          <div class="well">
-            blah blah blah. The container inside the item must be position:relative
-          </div>
-        </div>
-      </div>
-    </div>
-
+  <div class="section-content-header">
+    <ul class="breadcrumb" style="margin-bottom: 5px;">
+      <li class="active">Latest post</li>
+    </ul>
   </div>
-</div>
 
-<% include partials/scripts.ejs %>
+  <div class="outerWrapper">
 
-</body>
+    <div class="innerWrapper">
+
+      <% include partials/sidebar.ejs %>
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+
+            <div class="panel panel-material-orange">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-home"></i> Mild Property</h3>
+                <div class="panel-icon-holder">
+                  <ul>
+                    <li class="dropdown">
+                      <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="mdi-content-sort"></i></a>
+                      <ul class="dropdown-menu label-material-orange">
+                        <li> <a href="#"><i class="mdi-action-room"></i></a></li>
+                        <li><a href="#"><i class="mdi-communication-call"></i></a></li>
+                        <li><a href="#"><i class="mdi-image-photo"></i></a></li>
+                        <li><a href=""><i class="mdi-content-archive"></i></a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel-info-header">
+                <p> <i class="mdi-social-group"></i> Person/Company</p> <i class="mdi-navigation-chevron-right"></i>
+              </div>
+              <div class="panel-body">
+                When a new property is added to a users account, it will be represented by this green color
+              </div>
+            </div><!-- panel -->
+
+            <div class="panel panel-success">
+              <div class="panel-heading">
+                <h3 class="panel-title"> <i class="fa fa-home"></i> Sold Property</h3>
+                <div class="panel-icon-holder">
+                  <ul>
+                    <li class="dropdown">
+                      <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="mdi-content-sort"></i></a>
+                      <ul class="dropdown-menu label-success">
+                        <li> <a href="#"><i class="mdi-action-room"></i></a></li>
+                        <li><a href="#"><i class="mdi-communication-call"></i></a></li>
+                        <li><a href="#"><i class="mdi-image-photo"></i></a></li>
+                        <li><a href=""><i class="mdi-content-archive"></i></a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel-info-header">
+                <p> <i class="mdi-social-group"></i> Person/Company<i class="mdi-navigation-chevron-right"></i>
+              </div>
+              <div class="panel-body">
+                When a property is sold the user will add the sold tag and the panel will be represented by this green color.
+                once a property is sold it will have a limited time before it is removed from the home post timeline.
+                <br><br>
+                When the user sets there sold to true this will improved their rating status
+              </div>
+            </div><!-- panel -->
+
+            <div class="panel panel-danger">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-home"></i> Hot Property</h3>
+                <div class="panel-icon-holder">
+                  <ul>
+                    <li class="dropdown">
+                      <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="mdi-content-sort"></i></a>
+                      <ul class="dropdown-menu label-danger">
+                        <li> <a href="#"><i class="mdi-action-room"></i></a></li>
+                        <li><a href="#"><i class="mdi-communication-call"></i></a></li>
+                        <li><a href="#"><i class="mdi-image-photo"></i></a></li>
+                        <li><a href=""><i class="mdi-content-archive"></i></a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel-info-header">
+                <p> <i class="mdi-social-group"></i> Person/Company</p> <i class="mdi-navigation-chevron-right"></i>
+              </div>
+              <div class="panel-body">
+                For every 5 Properties added a company can set one property as a hot property
+              </div>
+            </div><!-- panel -->
+
+          </div><!-- col-lg-4 col-md-6 -->
+          <div class="col-lg-6 col-md-6">
+
+            <div class="panel panel-success">
+              <div class="panel-heading">
+                <h3 class="panel-title"> <i class="fa fa-home"></i> Sold Property</h3>
+                <div class="panel-icon-holder label-success">
+                  <ul>
+                    <li class="dropdown">
+                      <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="mdi-content-sort"></i></a>
+                      <ul class="dropdown-menu label-success">
+                        <li> <a href="#"><i class="mdi-action-room"></i></a></li>
+                        <li><a href="#"><i class="mdi-communication-call"></i></a></li>
+                        <li><a href="#"><i class="mdi-image-photo"></i></a></li>
+                        <li><a href=""><i class="mdi-content-archive"></i></a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel-info-header">
+                <p> <i class="mdi-social-group"></i> Person/Company<i class="mdi-navigation-chevron-right"></i>
+              </div>
+              <div class="panel-body">
+                When a property is sold the user will add the sold tag and the panel will be represented by this green color.
+              </div>
+            </div><!-- panel -->
+
+            <div class="panel panel-material-purple">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-home"></i> New Property Added</h3>
+                <div class="panel-icon-holder">
+                  <ul>
+                    <li class="dropdown">
+                      <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="mdi-content-sort"></i></a>
+                      <ul class="dropdown-menu label-material-purple">
+                        <li> <a href="#"><i class="mdi-action-room"></i></a></li>
+                        <li><a href="#"><i class="mdi-communication-call"></i></a></li>
+                        <li><a href="#"><i class="mdi-image-photo"></i></a></li>
+                        <li><a href=""><i class="mdi-content-archive"></i></a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel-info-header">
+                <p> <i class="mdi-social-group"></i> Person/Company</p> <i class="mdi-navigation-chevron-right"></i>
+              </div>
+              <div class="panel-body">
+                When a new property is added to a users account, it will be represented by this green color
+              </div>
+            </div><!-- panel -->
+
+            <div class="panel panel-info">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-home"></i> Cold Property</h3>
+                <div class="panel-icon-holder">
+                  <ul>
+                    <li class="dropdown">
+                      <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="mdi-content-sort"></i></a>
+                      <ul class="dropdown-menu label-info">
+                        <li> <a href="#"><i class="mdi-action-room"></i></a></li>
+                        <li><a href="#"><i class="mdi-communication-call"></i></a></li>
+                        <li><a href="#"><i class="mdi-image-photo"></i></a></li>
+                        <li><a href=""><i class="mdi-content-archive"></i></a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel-info-header">
+                <p> <i class="mdi-social-group"></i> Person/Company</p> <i class="mdi-navigation-chevron-right"></i>
+              </div>
+              <div class="panel-body">
+                This Property has been online for a while so it's status is cold
+              </div>
+            </div><!-- panel -->
+
+          </div><!-- col-lg-4 col-md-6 -->
+
+        </div><!-- row -->
+
+      </div>
+
+    </div>
+  </div>
+
+  <% include partials/scripts.ejs %>
+
+  </body>
 
 </html>
 
