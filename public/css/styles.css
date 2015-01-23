@@ -32,13 +32,14 @@ h2 {
   line-height: 31px;
   margin: 0 auto;
   text-indent: 4px;
-  white-space: nowrap; }
+  white-space: nowrap;
+  text-align: left; }
   @media screen and (max-width: 480px) {
     .navbar-header .section-title {
       display: none; } }
 
 .sidebar-wrapper {
-  top: 50px; }
+  top: 101px; }
 
 .sidebar-toggle {
   top: 45px;
@@ -149,6 +150,15 @@ h2 {
   .panel-icon-holder a:hover {
     color: white !important; }
 
+.add-row {
+  max-width: 320px;
+  position: fixed;
+  right: 0;
+  padding-left: 55px; }
+  @media screen and (max-width: 480px) {
+    .add-row {
+      display: none; } }
+
 .panel {
   border-radius: 2px;
   border: 0;
@@ -204,12 +214,9 @@ h2 {
   list-style: none;
   background-color: transparent !important;
   border-radius: 4px;
-  margin-left: 210px; }
+  margin-left: 0px; }
   .breadcrumb li a {
     color: white !important; }
-  @media screen and (max-width: 991px) {
-    .breadcrumb {
-      margin-left: 5px; } }
 
 .breadcrumb li.active {
   color: white !important; }

@@ -137,7 +137,7 @@
   z-index: 1052;
 }
 .sidebar-trigger .sidebar-wrapper {
-  z-index: 1003;
+  z-index: 999;
 }
 .sidebar-wrapper.sidebar-default {
   color: #222222;
