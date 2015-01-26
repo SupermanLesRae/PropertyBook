@@ -294,6 +294,12 @@ h2 {
   }
 }
 
+.dropdown-toggle a, a:hover, a:focus {
+
+    text-decoration: none;
+
+}
+
 .breadcrumb {
   padding: 16px 15px;
   margin-bottom: 20px;
@@ -315,6 +321,15 @@ h2 {
 .breadcrumb {
   li.active {
     color:white!important;
+  }
+}
+
+.not-active {
+  pointer-events: none;
+  cursor: default;
+
+  a {
+    background: #eeeeee!important;
   }
 }
 

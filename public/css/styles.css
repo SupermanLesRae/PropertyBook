@@ -208,6 +208,9 @@ h2 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   float: right; }
 
+.dropdown-toggle a, a:hover, a:focus {
+  text-decoration: none; }
+
 .breadcrumb {
   padding: 16px 15px;
   margin-bottom: 20px;
@@ -220,6 +223,12 @@ h2 {
 
 .breadcrumb li.active {
   color: white !important; }
+
+.not-active {
+  pointer-events: none;
+  cursor: default; }
+  .not-active a {
+    background: #eeeeee !important; }
 
 .navbar-right {
   float: right !important;

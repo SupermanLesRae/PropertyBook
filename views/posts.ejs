@@ -25,7 +25,7 @@
 
           <div class="col-md-8">
 
-            <div class="panel panel-material-orange">
+            <div class="panel animated bounceInLeft panel-material-orange">
               <div class="panel-heading">
                 <h3 class="panel-title"><i class="fa fa-home"></i> Mild Property</h3>
                 <div class="panel-icon-holder">
@@ -46,14 +46,14 @@
                 <p> <i class="mdi-social-group"></i> Person/Company</p> <i class="mdi-navigation-chevron-right"></i>
               </div>
               <div class="pic-source">
-                <img width="100%" src="http://lorempixel.com/output/city-q-c-610-300-10.jpg" alt=""/>
+                <img width="100%" src="http://lorempixel.com/output/city-q-c-480-320-6.jpg" alt=""/>
               </div>
               <div class="panel-body">
                 When a new property is added to a users account, it will be represented by this green color
               </div>
             </div><!-- panel -->
 
-            <div class="panel panel-success">
+            <div class="panel animated bounceInLeft panel-success">
               <div class="panel-heading">
                 <h3 class="panel-title"> <i class="fa fa-home"></i> Sold Property</h3>
                 <div class="panel-icon-holder">
@@ -74,7 +74,7 @@
                 <p> <i class="mdi-social-group"></i> Person/Company<i class="mdi-navigation-chevron-right"></i>
               </div>
               <div class="pic-source">
-                <img width="100%" src="http://lorempixel.com/output/city-q-c-610-200-4.jpg" alt=""/>
+                <img width="100%" src="http://lorempixel.com/output/city-q-c-480-320-6.jpg" alt=""/>
               </div>
               <div class="panel-body">
                 When a property is sold the user will add the sold tag and the panel will be represented by this green color.
@@ -84,7 +84,7 @@
               </div>
             </div><!-- panel -->
 
-            <div class="panel panel-danger">
+            <div class="panel animated bounceInLeft panel-danger">
               <div class="panel-heading">
                 <h3 class="panel-title"><i class="fa fa-home"></i> Hot Property</h3>
                 <div class="panel-icon-holder">
@@ -112,7 +112,7 @@
               </div>
             </div><!-- panel -->
 
-            <div class="panel panel-success">
+            <div class="panel animated bounceInLeft panel-success">
               <div class="panel-heading">
                 <h3 class="panel-title"> <i class="fa fa-home"></i> Sold Property</h3>
                 <div class="panel-icon-holder label-success">
@@ -140,7 +140,7 @@
               </div>
             </div><!-- panel -->
 
-            <div class="panel panel-material-purple">
+            <div class="panel animated bounceInLeft panel-material-purple">
               <div class="panel-heading">
                 <h3 class="panel-title"><i class="fa fa-home"></i> New Property Added</h3>
                 <div class="panel-icon-holder">
@@ -161,14 +161,14 @@
                 <p> <i class="mdi-social-group"></i> Person/Company</p> <i class="mdi-navigation-chevron-right"></i>
               </div>
               <div class="pic-source">
-                <img width="100%" src="http://lorempixel.com/output/city-q-c-610-200-8.jpg" alt=""/>
+                <img width="100%" src="http://lorempixel.com/output/city-q-c-800-600-2.jpg" alt=""/>
               </div>
               <div class="panel-body">
                 When a new property is added to a users account, it will be represented by this green color
               </div>
             </div><!-- panel -->
 
-            <div class="panel panel-info">
+            <div class="panel animated bounceInLeft panel-info">
               <div class="panel-heading">
                 <h3 class="panel-title"><i class="fa fa-home"></i> Cold Property</h3>
                 <div class="panel-icon-holder">
@@ -189,7 +189,7 @@
                 <p> <i class="mdi-social-group"></i> Person/Company</p> <i class="mdi-navigation-chevron-right"></i>
               </div>
               <div class="pic-source">
-                <img width="100%" src="http://lorempixel.com/output/city-q-c-610-300-6.jpg" alt=""/>
+                <img width="100%" src="http://lorempixel.com/output/city-q-c-800-600-2.jpg" alt=""/>
               </div>
               <div class="panel-body">
                 This Property has been online for a while so it's status is cold
@@ -201,19 +201,19 @@
 
           <div class="add-row col-md-4">
 
-            <div class="panel panel-danger">
+            <div class="panel animated zoomIn panel-danger">
               <div class="panel-body">
                 Advertise
               </div>
             </div><!-- panel -->
 
-            <div class="panel panel-danger">
+            <div class="panel animated zoomIn panel-danger">
               <div class="panel-body">
                 Advertise
               </div>
             </div><!-- panel -->
 
-            <div class="panel panel-danger">
+            <div class="panel animated zoomIn panel-danger">
               <div class="panel-body">
                 Advertise
               </div>
@@ -226,7 +226,26 @@
     </div>
   </div>
 
+    </div>
+
   <% include partials/scripts.ejs %>
+
+  <script>
+
+    $(document).ready(function() {
+
+      $('.posts').addClass('not-active')
+
+      //Clicks
+      $('.dropdown-toggle').click(function() {
+        $('.dropdown-toggle').removeClass('animated swing');
+        $(this).addClass('animated swing');
+        $('.dropdown-menu li').addClass('animated bounceIn');
+      });
+    });
+
+
+  </script>
 
   </body>
 
