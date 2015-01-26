@@ -24,9 +24,9 @@
             <div class="row">
                 <div class="col-md-8">
 
-                    <div class="panel panel-danger">
+                    <div class="panel panel-material-pink">
                         <div class="panel-heading">
-                            <h3 class="panel-title"><i class="fa fa-home"></i> Hot Property</h3>
+                            <h3 class="panel-title"><i class="fa fa-home"></i> Rental</h3>
                             <div class="panel-icon-holder">
                                 <ul>
                                     <li class="dropdown">
@@ -51,9 +51,9 @@
                             For every 5 Properties added a company can set one property as a hot property
                         </div>
                     </div><!-- panel -->
-                    <div class="panel panel-danger">
+                    <div class="panel panel-material-pink">
                         <div class="panel-heading">
-                            <h3 class="panel-title"><i class="fa fa-home"></i> Hot Property</h3>
+                            <h3 class="panel-title"><i class="fa fa-home"></i> Rental</h3>
                             <div class="panel-icon-holder">
                                 <ul>
                                     <li class="dropdown">
@@ -78,9 +78,9 @@
                             For every 5 Properties added a company can set one property as a hot property
                         </div>
                     </div><!-- panel -->
-                    <div class="panel panel-danger">
+                    <div class="panel panel-material-pink">
                         <div class="panel-heading">
-                            <h3 class="panel-title"><i class="fa fa-home"></i> Hot Property</h3>
+                            <h3 class="panel-title"><i class="fa fa-home"></i> Rental</h3>
                             <div class="panel-icon-holder">
                                 <ul>
                                     <li class="dropdown">
@@ -105,9 +105,9 @@
                             For every 5 Properties added a company can set one property as a hot property
                         </div>
                     </div><!-- panel -->
-                    <div class="panel panel-danger">
+                    <div class="panel panel-material-pink">
                         <div class="panel-heading">
-                            <h3 class="panel-title"><i class="fa fa-home"></i> Hot Property</h3>
+                            <h3 class="panel-title"><i class="fa fa-home"></i> Rental</h3>
                             <div class="panel-icon-holder">
                                 <ul>
                                     <li class="dropdown">
@@ -137,19 +137,19 @@
 
                 <div class="add-row col-md-4">
 
-                    <div class="panel panel-danger">
+                    <div class="panel panel-material-pink">
                         <div class="panel-body">
                             Advertise
                         </div>
                     </div><!-- panel -->
 
-                    <div class="panel panel-danger">
+                    <div class="panel panel-material-pink">
                         <div class="panel-body">
                             Advertise
                         </div>
                     </div><!-- panel -->
 
-                    <div class="panel panel-danger">
+                    <div class="panel panel-material-pink">
                         <div class="panel-body">
                             Advertise
                         </div>
@@ -167,7 +167,10 @@
 <% include partials/scripts.ejs %>
 
 <script>
-    $('.hot').addClass('not-active');
+    $(document).ready(function() {
+        $('.rentals').addClass('not-active');
+        $('.panel').addClass('animated bounceInUp');
+    })
 </script>
 
 </body>

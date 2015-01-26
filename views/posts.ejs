@@ -25,6 +25,34 @@
 
           <div class="col-md-8">
 
+            <div class="panel panel-material-pink">
+              <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-home"></i> Rental</h3>
+                <div class="panel-icon-holder">
+                  <ul>
+                    <li class="dropdown">
+                      <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="mdi-content-sort"></i></a>
+                      <ul class="dropdown-menu label-danger">
+                        <li> <a href="#"><i class="mdi-action-room"></i></a></li>
+                        <li><a href="#"><i class="mdi-communication-call"></i></a></li>
+                        <li><a href="#"><i class="mdi-image-photo"></i></a></li>
+                        <li><a href=""><i class="mdi-content-archive"></i></a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel-info-header">
+                <p> <i class="mdi-social-group"></i> Person/Company</p> <i class="mdi-navigation-chevron-right"></i>
+              </div>
+              <div class="pic-source">
+                <img width="100%" src="http://lorempixel.com/output/city-q-c-480-320-6.jpg" alt=""/>
+              </div>
+              <div class="panel-body">
+                For every 5 Properties added a company can set one property as a hot property
+              </div>
+            </div><!-- panel -->
+
             <div class="panel panel-material-orange">
               <div class="panel-heading">
                 <h3 class="panel-title"><i class="fa fa-home"></i> Mild Property</h3>
@@ -226,7 +254,16 @@
     </div>
   </div>
 
+    </div>
+
   <% include partials/scripts.ejs %>
+
+  <script>
+      $(document).ready(function() {
+          $('.posts').addClass('not-active');
+          $('.panel').addClass('animated bounceInLeft');
+      })
+  </script>
 
   </body>
 
