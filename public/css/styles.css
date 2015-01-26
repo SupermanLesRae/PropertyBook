@@ -11,6 +11,15 @@ h1 {
 h2 {
   font-size: 36px; }
 
+.not-active {
+  pointer-events: none;
+  cursor: default; }
+  .not-active a {
+    background: #eeeeee !important; }
+
+.sidebar-active {
+  background-color: #eeeeee; }
+
 .navbar i {
   position: absolute;
   color: #E3F2FD;

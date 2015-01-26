@@ -18,6 +18,20 @@ h2 {
   font-size: 36px;
 }
 
+.not-active {
+  pointer-events: none;
+  cursor: default;
+ // text-decoration: underline;
+  a {
+    background:#EEEEEE!important;
+  }
+
+}
+
+.sidebar-active {
+  background-color: #eeeeee;
+}
+
 
 .navbar i {
   position:absolute; color:#E3F2FD; left:180px;

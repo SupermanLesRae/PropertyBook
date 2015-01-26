@@ -21,6 +21,10 @@ module.exports = {
     posts: function (req, res) {
         res.render('posts', { title: 'Home', session:session});
     },
+    //landing ----------------------------------------------------------------------------------------------------------
+    rentals: function (req, res) {
+        res.render('rentals', { title: 'Rentals', session:session});
+    },
     //home ----------------------------------------------------------------------------------------------------------
     home: function (req, res) {
         res.render('home', { title: 'Home', session:session});
