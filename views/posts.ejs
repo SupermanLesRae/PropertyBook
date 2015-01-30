@@ -8,7 +8,7 @@
   <% include partials/navbar.ejs %>
 
   <div class="section-content-header">
-    <ul class="breadcrumb" style="margin-bottom: 5px;">
+    <ul class="breadcrumb">
       <li class="active">Latest post</li>
     </ul>
   </div>
@@ -235,13 +235,13 @@
     $(document).ready(function() {
 
       $('.posts').addClass('not-active')
-
       //Clicks
       $('.dropdown-toggle').click(function() {
         $('.dropdown-toggle').removeClass('animated swing');
         $(this).addClass('animated swing');
         $('.dropdown-menu li').addClass('animated bounceIn');
       });
+
     });
 
 

@@ -1,0 +1,25 @@
+.profileHeader {
+  .list-group .list-group-separator:before {
+    content: "";
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    float: right;
+  }
+}//profileHeader
+
+.profile-pills {
+  position:relative;
+  margin:30px 0 30px 20px;
+  ul {
+    li {
+      a:hover {
+        background: #cdcdcd !important;
+      }
+    }
+    li.active {
+      a:hover {
+        background: #337ab7!important;
+      }
+    }
+  }
+}//profile-pills

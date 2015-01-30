@@ -2,28 +2,6 @@ var express = require('express');
 var router = express.Router();
 var routesCall = require('./route_methods');
 
-/*
-//mongoose data entries
-var pass = passwordHash.generate('password123');
-router.get('/entries/:username', function(req, res) {
-  console.log(pass);
-  userEntries.update({username:req.params.username}, {password:pass},function(err, entries) {
-    userEntries.find(function(err, entries) {
-      res.send(entries);
-    })
-  })
-
-});
-*/
-/*
-router.get('/entries', function(req, res) {
-  userEntries.find(function(err, entries) {
-    res.send(entries);
-  })
-});
-*/
-
-
 //Home
 router.get('/', routesCall.home);
 router.get('/posts', routesCall.posts);
