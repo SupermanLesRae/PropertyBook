@@ -100,8 +100,6 @@ if(!$("html").hasClass("touch")){
 
 $(document).ready(function(){
 
-    $('.homewrapper').fadeIn('slow');
-
     $('#getStartedBtn').click(function(e) {
         $('html, body').animate({
             scrollTop: ($("#screen02").offset().top),
@@ -144,5 +142,7 @@ $(document).ready(function(){
         }, 500);
         e.preventDefault();// to prevent default working of anchor;
     });
+
+    $('.homewrapper').fadeIn('slow');
 });
 

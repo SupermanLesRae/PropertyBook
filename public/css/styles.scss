@@ -55,7 +55,7 @@ h2 {
     white-space: nowrap;
     text-align: left;
     @media screen and (max-width: $break-medium) {
-     // font-size: 32px;
+      // font-size: 32px;
     }
     @media screen and (max-width: $break-small) {
       //font-size: 18px;
@@ -165,7 +165,7 @@ h2 {
 }//outerWrapper
 
 .homewrapper {
-  display:none;
+  display:block;
   width:100%;
   height:100%;
 }
@@ -235,13 +235,13 @@ h2 {
   height:50px;
   font-style: italic;
   background: #efefef;
-   p {
-     line-height: 50px;
-     padding-left:15px;
-     i {
-       float:none;
-     }
-   }
+  p {
+    line-height: 50px;
+    padding-left:15px;
+    i {
+      float:none;
+    }
+  }
 
   i {
     float:right;
@@ -269,7 +269,7 @@ h2 {
 
 .dropdown-toggle a, a:hover, a:focus {
 
-    text-decoration: none;
+  text-decoration: none;
 
 }
 
@@ -310,7 +310,7 @@ h2 {
 ////////////////////////////////////////////////////////////////////////////////////
 .navbar-right {
   float: right !important;
-   margin-right: 0px!important;
+  margin-right: 0px!important;
 }
 
 .logo {

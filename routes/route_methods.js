@@ -31,12 +31,16 @@ module.exports = {
     },
     //login ------------------------------------------------------------------------------------------------------------
     login: function (req, res) {
-
         if(session.hasUserLoggedOut){
             req.flash('goodbye', ['Logout successful, goodbye']);
             console.log('session.hasUserLoggedOut: ' + session.hasUserLoggedOut);
-            session.hasUserLoggedOut = false;
+            session.isUserLoggedOut = false;
         }
+        else if(session.loginfail) {
+            req.flash('loginFail', ['username / password incorrect']);
+            session.loginfail = false;
+        }
+
         res.render('login', { title: 'Login', session:session});
     },
     //Login Post -------------------------------------------------------------------------------------------------------
@@ -48,6 +52,7 @@ module.exports = {
                 res.render('error', { title: 'Page Error 404' });
             }
             else {
+
                 if(passwordHash.verify(req.body.password, entries.password) && req.body.email == entries.email) {
                     session.email = req.body.email;
                     session.isLoggedIn = true;
@@ -56,8 +61,9 @@ module.exports = {
                     return res.redirect('/profile')
                 }
                 else {
-                    req.flash('info', ['username / password incorrect']);
-                    res.render('login', { title: 'Login', session: session });
+                    //session = req.session;
+                    session.loginfail = true;
+                    res.redirect('/login');
                 }
             }
         })

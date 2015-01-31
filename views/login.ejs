@@ -28,6 +28,13 @@
                 <% } %>
             </div>
             <% } %>
+            <% if (messages.loginFail) { %>
+            <div class="alert alert-danger">
+                <% for(var i=0; i<messages.loginFail.length; i++) { %>
+                <p><%= messages.loginFail[i] %></p>
+                <% } %>
+            </div>
+            <% } %>
 
             <form action="/login" role="form" method="post" class="form-horizontal">
                 <fieldset>
